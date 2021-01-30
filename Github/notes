@@ -1,4 +1,4 @@
-#Gitignore file for golang
+# Gitignore file for golang
 
 # Binaries for programs and plugins
 *.exe
