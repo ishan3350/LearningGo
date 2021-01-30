@@ -1,0 +1,10 @@
+go version: shows version
+go env: shows go envionment variables
+go help : it displays help
+go fmt : go fmt will format the code
+go run : it will build and run go code
+go build : it will make executable binary
+go install : go install will compile file and put it in go binary location
+ 
+
+
