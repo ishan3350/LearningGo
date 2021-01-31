@@ -32,10 +32,14 @@ func main() {
 	test()
 
 	typeexplained()
+
+	zerovalue()
 }
 
 func test() {
-	fmt.Println(z)
+	fmt.Println("Printing the value of z" + z)
+	fmt.Printf("Printing the type of z %T", z)
+	fmt.Println("")
 	z = "Hello World!"
 	fmt.Println(z)
 }
@@ -54,4 +58,9 @@ func typeexplained() {
 	// How to use quote in variable value
 	str := `"Hello World!"`
 	fmt.Println(str)
+}
+
+func zerovalue() {
+	var c int
+	fmt.Println(c)
 }
