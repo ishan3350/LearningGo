@@ -30,10 +30,28 @@ func main() {
 	// difference between short declaration and var declaration is you can't use short declaration outside of function. It will only work with in function
 
 	test()
+
+	typeexplained()
 }
 
 func test() {
 	fmt.Println(z)
 	z = "Hello World!"
 	fmt.Println(z)
+}
+
+func typeexplained() {
+	var b = 30
+	fmt.Printf("\nType of B: %T", b)
+	fmt.Printf("\nValue of B: %v", b)
+
+	// You can't change the type of variable once declared
+	// compiler error
+	// b = "Hello World"
+
+	fmt.Println("")
+
+	// How to use quote in variable value
+	str := `"Hello World!"`
+	fmt.Println(str)
 }
