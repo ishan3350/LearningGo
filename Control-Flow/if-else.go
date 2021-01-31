@@ -1,17 +1,33 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
-func main(){
+func main() {
 
+	//simpleifelse()
+
+	anotherifelse()
+
+}
+
+func simpleifelse() {
 	a := 10
 	b := 20
 
-	if a>b{
+	if a > b {
 		fmt.Println("a is greater than b")
-	}else{
+	} else {
 		fmt.Println("b is greater than a ")
+	}
+}
+
+// we can intialize variable in if block and it will limit within that block
+func anotherifelse(){
+	if a :=10;a<5{
+		fmt.Println("a is less than 5")
+	}else{
+		fmt.Println("a is greater than 5")
 	}
 }
