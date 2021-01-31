@@ -47,7 +47,10 @@ func main() {
 	//constants()
 
 	//iota
-	iotaexample()
+	//iotaexample()
+
+	//bitshifting
+	bitshifting()
 }
 
 func boolexample() {
@@ -163,4 +166,14 @@ func iotaexample(){
 
 	fmt.Printf("\n\nType of const3: %T ", const3)
 	fmt.Printf("\nValue of const3: %v ", const3)
+}
+
+func bitshifting(){
+
+	// Refer to https://www.computerhope.com/jargon/b/bit-shift.htm#:~:text=A%20bit%20shift%20is%20a,the%20CPU%20than%20conventional%20math.
+	x := 10
+	fmt.Printf("Binary value of x: %b",x)
+
+	y := x<<1
+	fmt.Printf("Decimal value of y %d, type of y %T, binary value of y: %b",y,y,y)
 }
