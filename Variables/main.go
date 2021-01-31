@@ -91,4 +91,18 @@ func typeexample() {
 	fmt.Println("\n")
 	fmt.Printf("Value of d %v",d)
 
+	// type conversion example
+
+	var e int = 60
+
+	// we can't assign the value of d to e because d is hiint type and e is int type
+
+	//type conversion
+
+	d = hiint(e)
+	fmt.Println("")
+	fmt.Printf("Value of d %v",d)
+
 }
+
+
