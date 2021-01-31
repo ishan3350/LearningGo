@@ -7,6 +7,7 @@ import (
 func main() {
 	//simpleswitch()
 	anotherswitchstatemnet()
+	multiplecase()
 }
 
 func simpleswitch() {
@@ -53,3 +54,20 @@ func anotherswitchstatemnet() {
 	}
 
 }
+
+func multiplecase(){
+	
+	str := "Hello"
+
+	switch str{
+	case "Hi", "Hello", "Hey":
+			fmt.Println("Hello!, Hi!, Hey!")
+	case "ok":
+		fmt.Println("ok")
+	default:
+		fmt.Println("No statements matching")
+
+		}
+	}
+
+
