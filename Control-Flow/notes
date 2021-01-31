@@ -1,0 +1,8 @@
+Computer will follow the sequential execution flow until it hits two things
+
+- loop
+- conditional
+
+
+1. loop
+- Go doesn't have while loop
