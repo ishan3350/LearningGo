@@ -12,6 +12,22 @@ const(
 	val2 string = "Hello World"
 	val3 bool= true
 )
+
+const(
+	const1 = iota
+	const2 = iota
+	const3 = iota
+
+	// Alternative way
+
+	/*
+	const1 = iota
+	const2 
+	const3 
+
+	*/
+)
+
 func main() {
 	fmt.Println("Types example")
 
@@ -28,7 +44,10 @@ func main() {
 	//numeralsystem()
 
 	//constants
-	constants()
+	//constants()
+
+	//iota
+	iotaexample()
 }
 
 func boolexample() {
@@ -133,4 +152,15 @@ func constants() {
 	fmt.Println(val2)
 	fmt.Println(val3)
 
+}
+
+func iotaexample(){
+	fmt.Printf("\n\nType of const1: %T ", const1)
+	fmt.Printf("\nValue of const1: %v ", const1)
+
+	fmt.Printf("\n\nType of const2: %T ", const2)
+	fmt.Printf("\nValue of const2: %v ", const2)
+
+	fmt.Printf("\n\nType of const3: %T ", const3)
+	fmt.Printf("\nValue of const3: %v ", const3)
 }
