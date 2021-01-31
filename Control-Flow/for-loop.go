@@ -17,6 +17,10 @@ func main() {
 	// infinite for loop example
 	//infiniteforloop()
 
+	//forbreakexample()
+
+	forcontinueexample()
+
 }
 
 func forloopexample() {
@@ -58,4 +62,29 @@ func infiniteforloop() {
 		fmt.Println(i)
 		i++
 	}
+}
+
+func forbreakexample() {
+	// break statement will break and exit the loop
+	i := 1
+	for {
+		if i <= 10 {
+			fmt.Println(i)
+			i++
+		} else {
+			break
+		}
+	}
+}
+
+func forcontinueexample() {
+	// continue statement will skip curreent iteration and continue the rest of loop
+	for i := 0; i <= 10; i++ {
+		if i == 5 {
+			continue
+		} else {
+			fmt.Println(i)
+		}
+	}
+
 }
