@@ -19,7 +19,9 @@ func main() {
 
 	//forbreakexample()
 
-	forcontinueexample()
+	//forcontinueexample()
+
+	printascii()
 
 }
 
@@ -85,6 +87,15 @@ func forcontinueexample() {
 		} else {
 			fmt.Println(i)
 		}
+	}
+
+}
+
+func printascii() {
+
+	for i := 0; i <= 126; i++ {
+		str := fmt.Sprintf("%q",i)
+		fmt.Println(str)
 	}
 
 }
