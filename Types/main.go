@@ -13,7 +13,11 @@ func main() {
 	// numeric types
 	//numerictypes()
 
-	stringtype()
+	// string type
+	//stringtype()
+
+	// numeral system program
+	numeralsystem()
 }
 
 func boolexample() {
@@ -65,7 +69,7 @@ func numerictypes() {
 func stringtype() {
 
 	// string is sequence of bytes
-	
+
 	s := "Hello World"
 
 	fmt.Printf("\n\nType of s: %T ", s)
@@ -82,10 +86,23 @@ func stringtype() {
 
 	//72 represents h. Let's prove this
 
-	fmt.Printf("first character of s %#U and type %T", s[0], s[0]) 
+	fmt.Printf("first character of s %#U and type %T", s[0], s[0])
 
 	// Finding length of string
 
-	fmt.Printf("\nstr has %v characters",len(s))
+	fmt.Printf("\nstr has %v characters", len(s))
+
+}
+
+func numeralsystem() {
+
+	a := 10
+
+	fmt.Printf("\n\nType of a: %T ", a)
+	fmt.Printf("\nValue of a: %v ", a)
+
+	// displaying number into binary and hexa decimal
+	fmt.Printf("Binary value of a %b: ", a)
+	fmt.Printf("Hexadecimal value of a %#X: ", a)
 
 }
