@@ -4,6 +4,14 @@ import (
 	"fmt"
 )
 
+//d eclaring block of constants
+
+const(
+
+	val1 int = 10
+	val2 string = "Hello World"
+	val3 bool= true
+)
 func main() {
 	fmt.Println("Types example")
 
@@ -17,7 +25,10 @@ func main() {
 	//stringtype()
 
 	// numeral system program
-	numeralsystem()
+	//numeralsystem()
+
+	//constants
+	constants()
 }
 
 func boolexample() {
@@ -104,5 +115,22 @@ func numeralsystem() {
 	// displaying number into binary and hexa decimal
 	fmt.Printf("Binary value of a %b: ", a)
 	fmt.Printf("Hexadecimal value of a %#X: ", a)
+
+}
+
+func constants() {
+
+	// const keyword is used to declare constants and once constant is declared the value can't be changed throughout the execution of program
+	const a = 10
+
+	fmt.Printf("\n\nType of a: %T ", a)
+	fmt.Printf("\nValue of a: %v ", a)
+
+	// compile error. Constant value can't be changed
+	//a = 20
+
+	fmt.Println(val1)
+	fmt.Println(val2)
+	fmt.Println(val3)
 
 }
