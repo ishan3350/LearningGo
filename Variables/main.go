@@ -4,6 +4,9 @@ import "fmt"
 
 var z string
 
+// creating type
+type hiint int
+
 func main() {
 
 	// You can't use keyword for variable names. Refer to https://golang.org/ref/spec#Keywords
@@ -36,6 +39,8 @@ func main() {
 	zerovalue()
 
 	exampleofsprintf()
+
+	typeexample()
 }
 
 func test() {
@@ -76,5 +81,14 @@ func exampleofsprintf() {
 	fmt.Println("\nGet Binary value of a number\n")
 	var str1 = fmt.Sprintf("%b", 50)
 	fmt.Println(str1)
+
+}
+
+func typeexample() {
+
+	var d hiint = 50
+	fmt.Printf("Type of d %T",d)
+	fmt.Println("\n")
+	fmt.Printf("Value of d %v",d)
 
 }
