@@ -8,7 +8,9 @@ func main() {
 
 	//simpleifelse()
 
-	anotherifelse()
+	//anotherifelse()
+
+	elseifexample()
 
 }
 
@@ -24,10 +26,23 @@ func simpleifelse() {
 }
 
 // we can intialize variable in if block and it will limit within that block
-func anotherifelse(){
-	if a :=10;a<5{
+func anotherifelse() {
+	if a := 10; a < 5 {
 		fmt.Println("a is less than 5")
-	}else{
+	} else {
 		fmt.Println("a is greater than 5")
+	}
+}
+
+func elseifexample() {
+	a := 10
+	b := 20
+
+	if a < b {
+		fmt.Println("a is greater than b")
+	} else if a > b {
+		fmt.Println("a is greater than b")
+	} else {
+		fmt.Println("a is equal to b")
 	}
 }
