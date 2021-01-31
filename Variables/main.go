@@ -34,6 +34,8 @@ func main() {
 	typeexplained()
 
 	zerovalue()
+
+	exampleofsprintf()
 }
 
 func test() {
@@ -63,4 +65,16 @@ func typeexplained() {
 func zerovalue() {
 	var c int
 	fmt.Println(c)
+}
+
+func exampleofsprintf() {
+
+	// You can get the value of print using string print
+
+	//let's get the binary of number
+
+	fmt.Println("\nGet Binary value of a number\n")
+	var str1 = fmt.Sprintf("%b", 50)
+	fmt.Println(str1)
+
 }
