@@ -57,5 +57,11 @@ func simplemapexample(){
 
 	fmt.Println(m)
 
+	// looping through map using for loop and range
+
+	for keydata, valuedata := range m{
+		fmt.Println(keydata,valuedata)
+	} 
+
 
 }
