@@ -25,4 +25,27 @@ func simpleslice(){
 	for key,value := range x{
 		fmt.Println(key,value)
 	}
+
+	// slicing the slice
+
+	// displays the whole slice
+	fmt.Println(x[:])
+
+	// starts from index position 1 and go upto 3 but index position 3 will be not included
+	fmt.Println(x[1:3])
+	
+	// starts from position 0 and go upto 3 but index position 3 will be not included
+	fmt.Println(x[:3])
+
+	// starts from index position 3 and include everything
+	fmt.Println(x[3:])
+
+	// accessing elements using for loop (Please don't use range)
+
+	for i:=0;i<len(x);i++{
+		fmt.Println(x[i])
+	}
+
+
+
 }
