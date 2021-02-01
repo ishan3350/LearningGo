@@ -34,4 +34,17 @@ func main(){
 			fmt.Println(hobbies)
 		}
 	}
+
+	// deleting key, value element from the map (Exercise 4.10)
+
+	delete(m,"Evan")
+
+	// displaying map and it's data (slice)
+	for key,val := range m{
+		fmt.Println(key)
+		for _,hobbies := range val{
+			fmt.Println(hobbies)
+		}
+	}
+
 }
