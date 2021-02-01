@@ -63,5 +63,14 @@ func simplemapexample(){
 		fmt.Println(keydata,valuedata)
 	} 
 
+	
+	// deleting elements from the map using delete function
+
+	delete(m,"Jack")
+
+	fmt.Println(m)
+
+
+
 
 }
