@@ -46,6 +46,25 @@ func simpleslice(){
 		fmt.Println(x[i])
 	}
 
+	// appending to the slice
+
+	x = append(x,6,7,8)
+	fmt.Println(x)
+
+
+	// creating another slice using compsite literal
+
+	y := []int{10,11,12,13,14,15}
+	fmt.Println(y)
+
+	// appending two slices
+
+	// ... tells compiler to take all elements from the slice and append it
+	x = append(x,y...)
+	fmt.Println(x)
+
+	// deleting elements from the slice
+	
 
 
 }
