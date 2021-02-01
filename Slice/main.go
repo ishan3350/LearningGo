@@ -7,7 +7,9 @@ import (
 func main() {
 	//simpleslice()
 
-	creatingsliceusingmake()
+	// creatingsliceusingmake()
+
+	multidimensionalslice()
 }
 
 func simpleslice() {
@@ -79,33 +81,35 @@ func creatingsliceusingmake() {
 	// if you know the size of slice in advance then it's good practice to create a slice using make function
 
 	/*
-	A slice is an abstraction that uses an array under the covers.
 
-cap tells you the capacity of the underlying array. len tells you how many items are in the array.
+			https://stackoverflow.com/questions/41668053/cap-vs-len-of-slice-in-golang#:~:text=The%20length%20of%20a%20slice,first%20element%20in%20the%20slice.
+			A slice is an abstraction that uses an array under the covers.
 
-The slice abstraction in Go is very nice since it will resize the underlying array for you, plus in Go arrays cannot be resized so slices are almost always used instead.
+		cap tells you the capacity of the underlying array. len tells you how many items are in the array.
 
-Example:
+		The slice abstraction in Go is very nice since it will resize the underlying array for you, plus in Go arrays cannot be resized so slices are almost always used instead.
 
-s := make([]int, 0, 3)
-for i := 0; i < 5; i++ {
-    s = append(s, i)
-    fmt.Printf("cap %v, len %v, %p\n", cap(s), len(s), s)
-}
-Will output something like this:
+		Example:
 
-cap 3, len 1, 0x1040e130
-cap 3, len 2, 0x1040e130
-cap 3, len 3, 0x1040e130
-cap 6, len 4, 0x10432220
-cap 6, len 5, 0x10432220
-As you can see once the capacity is met, append will return a new slice with a larger capacity. On the 4th iteration you will notice a larger capacity and a new pointer address.
+		s := make([]int, 0, 3)
+		for i := 0; i < 5; i++ {
+		    s = append(s, i)
+		    fmt.Printf("cap %v, len %v, %p\n", cap(s), len(s), s)
+		}
+		Will output something like this:
 
-Play example
+		cap 3, len 1, 0x1040e130
+		cap 3, len 2, 0x1040e130
+		cap 3, len 3, 0x1040e130
+		cap 6, len 4, 0x10432220
+		cap 6, len 5, 0x10432220
+		As you can see once the capacity is met, append will return a new slice with a larger capacity. On the 4th iteration you will notice a larger capacity and a new pointer address.
 
-I realize you did not ask about arrays and append but they are pretty foundational in understanding the slice and the reason for the builtins.
+		Play example
 
-https://play.golang.org/p/RhhsGgFYI1
+		I realize you did not ask about arrays and append but they are pretty foundational in understanding the slice and the reason for the builtins.
+
+		https://play.golang.org/p/RhhsGgFYI1
 
 	*/
 
@@ -114,12 +118,24 @@ https://play.golang.org/p/RhhsGgFYI1
 	fmt.Println(len(x))
 	fmt.Println(cap(x))
 
-	x[0] =1
+	x[0] = 1
 	x[1] = 2
 	x[2] = 3
 	x[3] = 4
 	x[4] = 5
 
 	fmt.Println(x)
+
+}
+
+func multidimensionalslice() {
+
+
+	// Multi dimensional slice
+	num1 := []int{1, 2, 3, 4, 5}
+	num2 := []int{6, 7, 8, 9, 10}
+
+	data := [][]int{num1, num2}
+	fmt.Println(data)
 
 }
