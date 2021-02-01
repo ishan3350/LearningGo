@@ -66,6 +66,8 @@ func simplemapexample(){
 	
 	// deleting elements from the map using delete function
 
+	//NOTE: If key doesn't exist then it will not throw any error. It will work just fine and there will be no changes to your map.
+
 	delete(m,"Jack")
 
 	fmt.Println(m)
