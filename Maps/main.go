@@ -51,6 +51,11 @@ func simplemapexample(){
 		fmt.Println(data)
 	}
 
+	// adding new key, value element in map
+
+	m["Jack"] = 20
+
+	fmt.Println(m)
 
 
 }
