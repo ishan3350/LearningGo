@@ -1,6 +1,6 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
@@ -45,4 +45,12 @@ func simplemapexample(){
 
 	// As you can see person1 doesn't exist in map so it will return default value 0 and status boolean false
 	fmt.Println(val,status)
+
+	// checking if the key exist or not before printing it
+	if data,ok := m["Bill"]; ok{
+		fmt.Println(data)
+	}
+
+
+
 }
