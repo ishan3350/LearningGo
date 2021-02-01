@@ -19,4 +19,19 @@ func main(){
 			fmt.Println(hobbies)
 		}
 	}
+
+	//adding a new record (Exercise 4.9)
+
+	person := "Evan"
+
+	personhobbies := []string{"hobbies10","hobbies11","hobbies12"}
+
+	m[person] = personhobbies
+
+	for key,val := range m{
+		fmt.Println(key)
+		for _,hobbies := range val{
+			fmt.Println(hobbies)
+		}
+	}
 }
