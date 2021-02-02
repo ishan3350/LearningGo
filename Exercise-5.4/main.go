@@ -4,6 +4,7 @@ import(
 	"fmt"
 )
 
+// anonymous struct example
 func main(){
 
 	p1 := struct{
