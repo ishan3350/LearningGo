@@ -6,26 +6,30 @@ import (
 
 // struct example
 
-type person struct{
+type person struct {
 	firstname string
-	lastname string
-	age int
+	lastname  string
+	age       int
 }
 
 // type within type example
 
-type occupation struct{
+type occupation struct {
 	person
 	isselfemployed bool
-	jobtitle string
-	salary int
+	jobtitle       string
+	salary         int
 }
-func main(){
+
+func main() {
+
+	// anonymous struct example
+	anonymousstruct()
 
 	p1 := person{
 		firstname: "Jack",
-		lastname: "Awesome",
-		age: 20,
+		lastname:  "Awesome",
+		age:       20,
 	}
 
 	fmt.Println(p1)
@@ -42,8 +46,8 @@ func main(){
 
 	p2 := person{
 		firstname: "Bill",
-		lastname: "Amazing",
-		age: 30,
+		lastname:  "Amazing",
+		age:       30,
 	}
 
 	fmt.Println(p2)
@@ -58,18 +62,19 @@ func main(){
 	// printing age
 	fmt.Println(p2.age)
 
+	
 
 	// type within type orstruct within struct
 
 	p3 := occupation{
 		person: person{
-			firstname:"test1",
-			lastname:"test2",
-			age: 30,
+			firstname: "test1",
+			lastname:  "test2",
+			age:       30,
 		},
 		isselfemployed: false,
-		jobtitle: "Information Security Engineer",
-		salary: 100000,
+		jobtitle:       "Information Security Engineer",
+		salary:         100000,
 	}
 
 	fmt.Println(p3)
@@ -94,4 +99,19 @@ func main(){
 
 	// salary
 	fmt.Println(p3.salary)
+}
+
+func anonymousstruct() {
+
+	person := struct {
+		first string
+		last  string
+		age   int
+	}{
+		first: "James",
+		last:  "Bond",
+		age:   32,
+	}
+
+	fmt.Println(person)
 }
