@@ -6,7 +6,6 @@ import (
 
 // struct example
 
-
 type person struct{
 	firstname string
 	lastname string
@@ -42,13 +41,13 @@ func main(){
 
 	//printing first name
 
-	fmt.Println(p1.firstname)
+	fmt.Println(p2.firstname)
 
 	// printing last name
-	fmt.Println(p1.lastname)
+	fmt.Println(p2.lastname)
 
 	// printing age
-	fmt.Println(p1.age)
+	fmt.Println(p2.age)
 
 
 }
