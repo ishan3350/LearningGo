@@ -7,8 +7,11 @@ import (
 
 func main(){
   // fmt.Println("Hello World!")
+ 
+  // defer will delay the execution of function. It will execute the defered the code and it will call before exiting main function
 
-  sayhello()
+  // This will execute at the end
+  defer sayhello()
 
   displaymessage("Hello World!")
 
@@ -32,6 +35,7 @@ func main(){
 
   // As you know varidaic parameter is slice of specified type but you can't directly pass slice as argument. You have to add ... operator at the end
   addall(x...)
+
 
 }
 
