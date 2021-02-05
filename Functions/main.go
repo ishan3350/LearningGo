@@ -55,6 +55,8 @@ func subtract(a int, b int)(int, string){
 // function with unlimited parameters (Variadic parameter)
 
 func addall(nums...int){
+
+  // variadic paramter is considered as slice of specified type
   result := 0
   for i:= range nums{
     result = result + nums[i]
