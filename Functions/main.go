@@ -23,6 +23,10 @@ func main(){
   fmt.Println(resultmsg)
   fmt.Println(result)
 
+  // Variadic function example (We can pass as many arguments as we want)
+
+  addall(10,20,30)
+
 }
 
 func sayhello(){
@@ -46,4 +50,14 @@ func add(a int, b int) int{
 func subtract(a int, b int)(int, string){
   ans := "Subtraction of b from a: "+strconv.Itoa(a-b)
   return a-b,ans
+}
+
+// function with unlimited parameters (Variadic parameter)
+
+func addall(nums...int){
+  result := 0
+  for i:= range nums{
+    result = result + nums[i]
+    fmt.Println(result)
+  }
 }
