@@ -1,7 +1,8 @@
 package main
 
-import(
-  "fmt"
+import (
+	"fmt"
+	"strconv"
 )
 
 func main(){
@@ -16,6 +17,11 @@ func main(){
   displaymessage("Hello again!")
 
   fmt.Println(add(10,20))
+
+  resultmsg,result := subtract(20,10)
+
+  fmt.Println(resultmsg)
+  fmt.Println(result)
 
 }
 
@@ -33,4 +39,11 @@ func displaymessage(msg string){
 
 func add(a int, b int) int{
   return a+b
+}
+
+// returning multiple values
+
+func subtract(a int, b int)(int, string){
+  ans := "Subtraction of b from a: "+strconv.Itoa(a-b)
+  return a-b,ans
 }
