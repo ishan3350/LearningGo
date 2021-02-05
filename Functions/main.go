@@ -4,6 +4,10 @@ import (
 	"fmt"
 	"strconv"
 )
+type person struct{
+  name string
+  age int
+}
 
 func main(){
   // fmt.Println("Hello World!")
@@ -36,6 +40,23 @@ func main(){
   // As you know varidaic parameter is slice of specified type but you can't directly pass slice as argument. You have to add ... operator at the end
   addall(x...)
 
+  p1 := person{
+
+    name: "Test",
+    age: 30,
+  }
+
+  p2 := person{
+    name: "test2",
+    age :35,
+  }
+  fmt.Println(p1)
+
+  p1.speak()
+
+  fmt.Println(p2)
+
+  p2.speak()
 
 }
 
@@ -72,5 +93,12 @@ func addall(nums...int){
     result = result + nums[i]
     fmt.Println(result)
   }
+}
+
+// method example 
+// attaching function to the struct
+
+func(p person) speak(){
+  fmt.Println(p.name,"is able to speak")
 }
 
