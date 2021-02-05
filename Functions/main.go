@@ -14,6 +14,9 @@ func main(){
   //We can call function as many times as we want
 
   displaymessage("Hello again!")
+
+  fmt.Println(add(10,20))
+
 }
 
 func sayhello(){
@@ -24,4 +27,10 @@ func sayhello(){
 
 func displaymessage(msg string){
   fmt.Println(msg)
+}
+
+// function returning value
+
+func add(a int, b int) int{
+  return a+b
 }
