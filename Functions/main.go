@@ -25,7 +25,13 @@ func main(){
 
   // Variadic function example (We can pass as many arguments as we want)
 
-  addall(10,20,30)
+  
+  // unfurling slice or passing slice to variadic parameter
+
+  x := []int{10,20,30,40,50,60}
+
+  // As you know varidaic parameter is slice of specified type but you can't directly pass slice as argument. You have to add ... operator at the end
+  addall(x...)
 
 }
 
@@ -63,3 +69,4 @@ func addall(nums...int){
     fmt.Println(result)
   }
 }
+
