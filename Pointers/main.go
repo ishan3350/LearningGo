@@ -4,15 +4,15 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	a := 40
 	fmt.Println(a)
-	
+
 	// getting memory address of variable
 	fmt.Println(&a)
 
 	// getting type (*int)
-	fmt.Printf("%T",&a)
+	fmt.Printf("%T", &a)
 
 	// & person will give you adderess of variable in memory where it is stored
 
@@ -28,5 +28,16 @@ func main(){
 	// changing value using pointer
 	*b = 20
 	fmt.Println(a)
+
+	x := 10
+	fmt.Println(x)
+	changevalue(&x)
+	fmt.Println(x)
+
+}
+
+// pointer as argument in function
+func changevalue(a *int) {
+	*a = 20
 
 }
