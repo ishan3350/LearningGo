@@ -1,10 +1,10 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
-func main(){
+func main() {
 
 	a := 10
 	fmt.Println(&a)
