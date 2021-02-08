@@ -6,17 +6,17 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-func main(){
+func main() {
 	s := "Password123!"
-	hash,_ := bcrypt.GenerateFromPassword([]byte(s),10)
+	hash, _ := bcrypt.GenerateFromPassword([]byte(s), 10)
 	fmt.Println(string(hash))
 
 	// checking if plaintext is matching with hash or not (Password validation method)
-	check := bcrypt.CompareHashAndPassword(hash,[]byte(s))
+	check := bcrypt.CompareHashAndPassword(hash, []byte(s))
 
-	if(check != nil){
+	if check != nil {
 		fmt.Println("Invalid password")
-	}else{
+	} else {
 		fmt.Println("Success")
 	}
 }
