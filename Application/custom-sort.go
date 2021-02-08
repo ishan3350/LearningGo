@@ -37,6 +37,11 @@ func main() {
 
 	people := []Person{p1, p2, p3}
 
+	// sorting slice by name
+	sort.Slice(people, func(i, j int) bool { return people[i].Name < people[j].Name })
+
+	fmt.Println(people)
+
 	// sorting  data in slice by Age
 	sort.Sort(ByAge(people))
 
