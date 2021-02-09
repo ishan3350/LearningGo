@@ -23,6 +23,7 @@ func main() {
 	fmt.Println("CPUs:\t", runtime.NumCPU())
 	fmt.Println("Goroutines:\t", runtime.NumGoroutine())
 
+	// We will wait for 2 things and program will exit and when compiler finds two wg.Done()
 	wg.Add(2)
 	go foo()
 	go bar()
