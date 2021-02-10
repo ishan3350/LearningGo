@@ -1,0 +1,8 @@
+<- is used put value in channel
+
+ch <- 40
+
+how to pull value from channel
+ fmt.Println(<-ch)
+
+ Try to stay away from buffer channel if possible
