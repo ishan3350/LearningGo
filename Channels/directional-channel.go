@@ -22,7 +22,7 @@ func main(){
 
 	// receive only channel
 
-	ch := make(<- chan int,2)
+	//ch := make(<- chan int,2)
 
 	// We are trying to send value in receive only channel
 	// ch <- 40
