@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
+	"sync/atomic"
 )
 
 var wg sync.WaitGroup
@@ -18,21 +19,18 @@ func main() {
 	fmt.Println("Num CPUs:", runtime.NumCPU())
 	fmt.Println("Num Goroutines", runtime.NumGoroutine())
 
-	counter := 0
+	var counter int64
 
 	const max = 100
-	var mute sync.Mutex
 
 	wg.Add(100)
 
 	for i := 0; i < max; i++ {
 		//wg.Add(1)
 		go func() {
-			mute.Lock()
+			atomic.AddInt64(&counter, 1)
 			//defer wg.Done()
-			fmt.Println(counter)
-			counter++
-			mute.Unlock()
+			fmt.Println(atomic.LoadInt64(&counter))
 			wg.Done()
 
 		}()
@@ -41,7 +39,5 @@ func main() {
 	wg.Wait()
 
 	fmt.Println("Counter Value:", counter)
-
-	fmt.Println("Num Goroutines", runtime.NumGoroutine())
 
 }
